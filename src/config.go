@@ -28,6 +28,13 @@ type Config struct {
 	TerminalBackground   string            `config:"terminal_background"`
 	Blocks               []*Block          `config:"blocks"`
 	Tooltips             []*Segment        `config:"tooltips"`
+	TransientPrompt      *TransientPrompt  `config:"transient_prompt"`
+}
+
+type TransientPrompt struct {
+	Template   string `config:"template"`
+	Background string `config:"background"`
+	Foreground string `config:"foreground"`
 }
 
 const (
